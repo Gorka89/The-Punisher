@@ -47,6 +47,18 @@ public class PunishmentRepositoryIT {
         assertEquals(title, punishment.getTitle());
         assertEquals(description, punishment.getDescription());
     }
+    
+    @Test
+    public void create_punishment_with_title_pepe_and_description_wold_then_return_object_punishment_with_title_pepe_and_description_world2(){
+
+        final String title = "pepe";
+        final String description = "world2";
+
+        Punishment punishment = punishmentRepository.create(title, description);
+
+        assertEquals(title, punishment.getTitle());
+        assertEquals(description, punishment.getDescription());
+    }
 
     @Test
     public void create_punishment_then_persist_in_bd(){
